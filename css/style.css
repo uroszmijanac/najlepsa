@@ -1,0 +1,30 @@
+body{
+	background-color: black;
+	font-size: 18px;
+
+}
+
+h1 {
+
+	color: #76B51B;
+	font-size: 2em;
+	text-align: center;
+}
+
+/* HEADER */
+#navigacija{
+
+	background-color: #26273c;
+	border-radius: 0;
+	border: 0;
+}
+
+#logo-img{
+
+	background: url('../img/logo.jpg') no-repeat;
+	width: 100px;
+	height: 100px;
+	margin: 10px 15px 10px 0;
+}
+/* END HEADER */
+
