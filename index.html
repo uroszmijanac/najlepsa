@@ -28,8 +28,13 @@
     var feed = new Instafeed({
         get: 'tagged',
         tagName: 'milajesila',
+        sortBy: 'most-liked',
+        limit: '28',
+        resolution: 'low_resolution',
+        template: '<a href="{{link}}"><img src="{{image}}" /></a>',
         clientId: '5bacdea7c4c345aa8c7e94550849c362',
         accessToken: '189940103.1677ed0.0e6f59084c7b4ca49ef070adfc7dcce0'
+
     });
     feed.run();
 </script>
@@ -249,13 +254,16 @@ feed.run();
   </div>
 </div>
 
-ovde bi treblo da ubaci
-xxx
-<p>prijatelji </p>
-<div id="instafeed">
+<div class="text-center">
+  <h2>Baci pogled na moju Instagram galeriju!</h2>
+</div>
+<div class="container text-center">
+  <div id="instafeed">
   
 
 </div>
+</div>
+
 
 
 
