@@ -11,7 +11,26 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Poiret+One'>
-    
+
+    <!-- instagram -->
+    var feed = new Instafeed({
+      get: 'tagged',
+        tagName: 'awesome'
+      userId: 5bacdea7c4c345aa8c7e94550849c362,
+      limit: 12,
+      resolution: 'low_resolution',
+      template: '<div class="insta-wrap"><img src="{{image}}" /><a href="{{link}}" target="_blank"><div class="likes-wrap"></div></a></div>',
+      after: function() {
+        if (!this.hasNext()) {
+            myButton.hide();
+        }
+    }
+});
+});
+
+feed.run();
+</script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -208,7 +227,10 @@
 </div>
 
 
-<div id="instafeed"></div>
+<div id="instafeed">
+  
+
+</div>
 
 
 
@@ -229,14 +251,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/instafeed.min.js"></script>
-    <script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'milajesila',
-        clientId: '5bacdea7c4c345aa8c7e94550849c362'
-    });
-    feed.run();
-</script>
+    <script type="text/javascript" src="../js/instafeed.min.js"></script>
+    
   </body>
 </html>
